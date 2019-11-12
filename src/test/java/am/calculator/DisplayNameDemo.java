@@ -12,7 +12,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("Display Name test on calculator case")
-class CalculatorDisplayNameTest {
+class DisplayNameDemo {
 
     private Calculator calculator;
 

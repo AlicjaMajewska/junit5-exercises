@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class TestClassesAndMethods {
+class TestClassesAndMethodsDemo {
 
     // Test Class: any top-level class, static member class, or @Nested class that contains at least one test method.
 
