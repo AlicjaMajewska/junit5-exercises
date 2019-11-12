@@ -20,4 +20,7 @@ class Calculator {
         return IntStream.rangeClosed(0, 9);
     }
 
+    int divide(int dividend, int divider) {
+        return dividend / divider;
+    }
 }
