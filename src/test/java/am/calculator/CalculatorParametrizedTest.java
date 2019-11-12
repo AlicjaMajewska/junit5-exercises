@@ -1,11 +1,7 @@
 package am.calculator;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInfo;
-import org.junit.jupiter.api.TestReporter;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.aggregator.AggregateWith;
 import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
@@ -27,23 +23,13 @@ import java.util.stream.Stream;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class CalculatorTest {
+class CalculatorParametrizedTest {
 
     private Calculator calculator;
 
     @BeforeEach
     void setUp() {
         calculator = new Calculator();
-    }
-
-    @Test
-    @DisplayName("1 + 2 = 3")
-    void testAdding() {
-        // when
-        int result = calculator.add(1, 2);
-
-        // then
-        assertThat(result).isEqualTo(3);
     }
 
     @ParameterizedTest()
@@ -192,7 +178,6 @@ class CalculatorTest {
      * Zero or more arguments supplied by a ParameterResolver must be declared last.
      */
 
-
     @ParameterizedTest
     @NullSource // or @NullAndEmptySource for both
     @EmptySource
@@ -200,5 +185,4 @@ class CalculatorTest {
     void nullEmptyAndBlankStrings(String text) {
         assertThat(text).isBlank();
     }
-
 }
